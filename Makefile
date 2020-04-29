@@ -41,7 +41,10 @@ USE_CABAL=      X11-1.9.1 \
                 unordered-containers-0.2.10.0 \
                 vector-0.12.1.2 \
                 vector-algorithms-0.8.0.3 \
-                hsc2hs-0.68.7
+                hashable-1.3.0.0 \
+                hsc2hs-0.68.7 \
+                dlist-0.8.0.8 \
+                utf8-string-1.0.1.1
 
 EXECUTABLES=      arbtt-capture arbtt-stats arbtt-recover arbtt-import arbtt-dump
 SKIP_CABAL_PLIST= yes
