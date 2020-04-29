@@ -41,12 +41,31 @@ USE_CABAL=      X11-1.9.1 \
                 vector-algorithms-0.8.0.3 \
                 hsc2hs-0.68.7
 
-EXECUTABLES=    arbtt-capture arbtt-stats arbtt-recover arbtt-import arbtt-dump
+EXECUTABLES=      arbtt-capture arbtt-stats arbtt-recover arbtt-import arbtt-dump
+SKIP_CABAL_PLIST= yes
 
-#FIXME: build and install docs
+OPTIONS_DEFINE=   MANPAGES
+OPTIONS_SUB=      yes
+MANPAGES_DESCRIBE= Build and/or install manpages
+
+OPTIONS_DEFAULT=  MANPAGES
+
+MANPAGES_BUILD_DEPENDS= ${LOCALBASE}/share/xsl/docbook/manpages/profile-docbook.xsl:textproc/docbook-xsl \
+                    xsltproc:textproc/libxslt
+
+post-patch-MANPAGES-on:
+	@${REINPLACE_CMD} -e 's|/usr/share/xml/docbook/stylesheet/nwalsh/manpages/profile-docbook.xsl|/usr/local/share/xsl/docbook/manpages/profile-docbook.xsl|g' ${WRKSRC}/doc/Makefile
+
 post-install:
 	${MKDIR} ${STAGEDIR}${EXAMPLESDIR}
 	${INSTALL_MAN} ${WRKSRC}/categorize.cfg ${STAGEDIR}${EXAMPLESDIR}
 	${INSTALL_MAN} ${WRKSRC}/arbtt-capture.desktop ${STAGEDIR}${EXAMPLESDIR}
+
+post-install-MANPAGES-on:
+	${MKDIR} ${STAGEDIR}${DOCSDIR}
+	cd ${WRKSRC}/doc && ${MAKE} man
+.for l in arbtt-stats arbtt-recover arbtt-import arbtt-dump arbtt-capture
+	${INSTALL_MAN} ${WRKSRC}/doc/man/man1/${l}.1 ${STAGEDIR}${PREFIX}/man/man1/
+.endfor
 
 .include <bsd.port.mk>
