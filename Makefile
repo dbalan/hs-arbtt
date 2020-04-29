@@ -21,6 +21,7 @@ USE_CABAL=      X11-1.9.1 \
                 base-orphans-0.8.2 \
                 bytestring-progress-1.4 \
                 conduit-1.3.2 \
+                data-default-0.7.1.1 \
                 exceptions-0.10.4_1 \
                 integer-logarithms-1.0.3_2 \
                 mono-traversable-1.0.15.1 \
