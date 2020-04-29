@@ -1,0 +1,13 @@
+/sdfom/ser
+bin/arbtt-capture
+bin/arbtt-dump
+bin/arbtt-import
+bin/arbtt-recover
+bin/arbtt-stats
+libexec/cabal/arbtt-capture
+libexec/cabal/arbtt-dump
+libexec/cabal/arbtt-import
+libexec/cabal/arbtt-recover
+libexec/cabal/arbtt-stats
+%%PORTEXAMPLES%%%%EXAMPLESDIR%%/arbtt-capture.desktop
+%%PORTEXAMPLES%%%%EXAMPLESDIR%%/categorize.cfg
