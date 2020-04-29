@@ -38,6 +38,7 @@ USE_CABAL=      X11-1.9.1 \
                 time-compat-1.9.3 \
                 unliftio-core-0.2.0.1_1 \
                 uuid-types-1.0.3_2 \
+                unordered-containers-0.2.10.0 \
                 vector-0.12.1.2 \
                 vector-algorithms-0.8.0.3 \
                 hsc2hs-0.68.7
