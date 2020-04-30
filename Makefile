@@ -14,9 +14,10 @@ LICENSE_FILE=            ${WRKSRC}/LICENSE
 USES=                    xorg cabal
 USE_XORG=                x11
 
-BUILD_DEPENDS=           ${LOCALBASE}/include/X11/extensions/scrnsaver.h:x11/libXScrnSaver
+BUILD_DEPENDS=           ${LOCALBASE}/include/X11/extensions/scrnsaver.h:x11/libXScrnSaver \
+                         ${LOCALBASE}/include/X11/extensions/Xrandr.h:x11/libXrandr
 
-USE_CABAL=               X11-1.9.1 \
+USE_CABAL=               X11-1.9 \
                          aeson-1.4.7.1_1 \
                          attoparsec-0.13.2.4 \
                          base-compat-0.11.1 \
@@ -44,7 +45,17 @@ USE_CABAL=               X11-1.9.1 \
                          vector-algorithms-0.8.0.3 \
                          hsc2hs-0.68.6 \
                          random-1.1 \
-
+                         data-default-0.7.1.1 \
+                         hashable-1.2.7.0_1 \
+                         unordered-containers-0.2.9.0 \
+                         dlist-0.8.0.5 \
+                         utf8-string-1.0.1.1_3 \
+                         data-default-class-0.1.2.0 \
+                         data-default-instances-base-0.1.0.1 \
+                         data-default-instances-containers-0.0.1 \
+                         data-default-instances-dlist-0.0.1 \
+                         data-default-instances-old-locale-0.0.1 \
+                         old-locale-1.0.0.7_2 \
 
 EXECUTABLES=             arbtt-capture arbtt-stats arbtt-recover arbtt-import arbtt-dump
 SKIP_CABAL_PLIST=        yes
@@ -55,7 +66,7 @@ MANPAGES_DESCRIBE=       Build and/or install manpages
 
 OPTIONS_DEFAULT=         MANPAGES
 
-MANPAGES_BUILD_DEPENDS= ${LOCALBASE}/share/xsl/docbook/manpages/profile-docbook.xsl:textproc/docbook-xsl \
+MANPAGES_BUILD_DEPENDS=  ${LOCALBASE}/share/xsl/docbook/manpages/profile-docbook.xsl:textproc/docbook-xsl \
                          xsltproc:textproc/libxslt
 
 post-patch-MANPAGES-on:
