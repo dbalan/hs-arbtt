@@ -14,6 +14,8 @@ LICENSE_FILE=            ${WRKSRC}/LICENSE
 USES=                    xorg cabal
 USE_XORG=                x11
 
+BUILD_DEPENDS=           ${LOCALBASE}/include/X11/extensions/scrnsaver.h:x11/libXScrnSaver
+
 USE_CABAL=               X11-1.9.1 \
                          aeson-1.4.7.1 \
                          attoparsec-0.13.2.4 \
