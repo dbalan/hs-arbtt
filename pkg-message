@@ -4,10 +4,10 @@
 This port does not start artbtt-capture automatically, you need to setup your desktop enviroment to run arbtt-capture on start.
 
 On supported WMs such as GNOME, KDE you can do that by
-cp /usr/local/share/examples/arbtt/arbtt-capture.desktop ~/.config/autostart/
+cp ${PREFIX}/share/examples/arbtt/arbtt-capture.desktop ~/.config/autostart/
 
 Also, you would need to have a categorize file at ~/.arbtt/categorize.cfg to run arbtt-stats
-sample file at: /usr/local/share/examples/arbtt/categorize.cfg
+A sample file is installed at ${PREFIX}/share/examples/arbtt/categorize.cfg
 EOM
 }
 ]
