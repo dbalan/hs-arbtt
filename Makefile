@@ -15,7 +15,9 @@ USES=                    xorg cabal
 USE_XORG=                x11
 
 BUILD_DEPENDS=           ${LOCALBASE}/include/X11/extensions/scrnsaver.h:x11/libXScrnSaver \
-                         ${LOCALBASE}/include/X11/extensions/Xrandr.h:x11/libXrandr
+                         ${LOCALBASE}/include/X11/extensions/Xrandr.h:x11/libXrandr \
+
+LIB_DEPENDS=             libpcre.so:devel/pcre
 
 USE_CABAL=               X11-1.9 \
                          aeson-1.4.7.1_1 \
