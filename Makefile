@@ -17,15 +17,15 @@ USE_XORG=                x11
 BUILD_DEPENDS=           ${LOCALBASE}/include/X11/extensions/scrnsaver.h:x11/libXScrnSaver
 
 USE_CABAL=               X11-1.9.1 \
-                         aeson-1.4.7.1 \
+                         aeson-1.4.7.1_1 \
                          attoparsec-0.13.2.4 \
                          base-compat-0.11.1 \
                          base-compat-batteries-0.11.1 \
                          base-orphans-0.8.2 \
                          bytestring-progress-1.4 \
                          conduit-1.3.2 \
-                         exceptions-0.10.4 \
-                         integer-logarithms-1.0.3 \
+                         exceptions-0.10.4_1 \
+                         integer-logarithms-1.0.3_2 \
                          mono-traversable-1.0.15.1 \
                          pcre-light-0.4.1.0 \
                          primitive-0.7.0.1 \
@@ -33,7 +33,7 @@ USE_CABAL=               X11-1.9.1 \
                          scientific-0.3.6.2 \
                          split-0.2.3.4 \
                          strict-0.3.2 \
-                         tagged-0.8.6 \
+                         tagged-0.8.6_2 \
                          terminal-progress-bar-0.4.1 \
                          terminal-size-0.3.2.1 \
                          th-abstraction-0.3.2.0 \
@@ -43,6 +43,8 @@ USE_CABAL=               X11-1.9.1 \
                          vector-0.12.1.2 \
                          vector-algorithms-0.8.0.3 \
                          hsc2hs-0.68.6 \
+                         random-1.1 \
+
 
 EXECUTABLES=             arbtt-capture arbtt-stats arbtt-recover arbtt-import arbtt-dump
 SKIP_CABAL_PLIST=        yes
