@@ -57,6 +57,9 @@ USE_CABAL=		X11-1.9 \
 EXECUTABLES=		arbtt-capture arbtt-stats arbtt-recover arbtt-import arbtt-dump
 SKIP_CABAL_PLIST=	yes
 
+SUB_FILE=		pkg-message
+SUB_LIST=		EXAMPLESDIR=${EXAMPLESDIR}
+
 OPTIONS_DEFINE=	MANPAGES
 OPTIONS_SUB=		yes
 MANPAGES_DESCRIBE=	Build and/or install manpages
