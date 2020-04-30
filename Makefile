@@ -77,7 +77,6 @@ post-install:
 	${INSTALL_MAN} ${WRKSRC}/arbtt-capture.desktop ${STAGEDIR}${EXAMPLESDIR}
 
 post-install-MANPAGES-on:
-	${MKDIR} ${STAGEDIR}${DOCSDIR}
 	cd ${WRKSRC}/doc && ${MAKE} man
 .for l in arbtt-stats arbtt-recover arbtt-import arbtt-dump arbtt-capture
 	${INSTALL_MAN} ${WRKSRC}/doc/man/man1/${l}.1 ${STAGEDIR}${PREFIX}/man/man1/
