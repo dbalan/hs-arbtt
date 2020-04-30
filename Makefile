@@ -12,10 +12,7 @@ LICENSE=                 GPLv2
 LICENSE_FILE=            ${WRKSRC}/LICENSE
 
 USES=                    xorg cabal
-USE_XORG=                x11
-
-BUILD_DEPENDS=           ${LOCALBASE}/include/X11/extensions/scrnsaver.h:x11/libXScrnSaver \
-                         ${LOCALBASE}/include/X11/extensions/Xrandr.h:x11/libXrandr \
+USE_XORG=                x11 xscrnsaver xext xrandr
 
 LIB_DEPENDS=             libpcre.so:devel/pcre
 
