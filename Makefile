@@ -13,7 +13,7 @@ LICENSE_FILE=		${WRKSRC}/LICENSE
 LIB_DEPENDS=		libpcre.so:devel/pcre
 
 USES=			xorg cabal
-USE_XORG=		x11 xscrnsaver xext xrandr
+USE_XORG=		x11 xscrnsaver xext xrandr xinerama
 USE_CABAL=		X11-1.9 \
 			aeson-1.4.7.1_1 \
 			attoparsec-0.13.2.4 \
