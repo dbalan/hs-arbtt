@@ -37,15 +37,15 @@ USE_CABAL=		X11-1.9 \
 			th-abstraction-0.3.2.0 \
 			time-compat-1.9.3 \
 			unliftio-core-0.2.0.1 \
-			uuid-types-1.0.3 \
+			uuid-types-1.0.3_2 \
 			vector-0.12.1.2 \
 			vector-algorithms-0.8.0.3 \
 			hsc2hs-0.68.6 \
 			random-1.1 \
 			data-default-0.7.1.1 \
-			hashable-1.2.7.0_1 \
-			unordered-containers-0.2.9.0 \
-			dlist-0.8.0.5 \
+			hashable-1.3.0.0_1 \
+			unordered-containers-0.2.10.0_1 \
+			dlist-0.8.0.8 \
 			utf8-string-1.0.1.1_3 \
 			data-default-class-0.1.2.0 \
 			data-default-instances-base-0.1.0.1 \
