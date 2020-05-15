@@ -70,7 +70,7 @@ MANPAGES_BUILD_DEPENDS=	${LOCALBASE}/share/xsl/docbook/manpages/profile-docbook.
 				xsltproc:textproc/libxslt
 
 post-patch-MANPAGES-on:
-	@${REINPLACE_CMD} -e 's|/usr/share/xml/docbook/stylesheet/nwalsh/manpages/profile-docbook.xsl|/usr/local/share/xsl/docbook/manpages/profile-docbook.xsl|g' ${WRKSRC}/doc/Makefile
+	@${REINPLACE_CMD} -e "s|/usr/share/xml/docbook/stylesheet/nwalsh/manpages/profile-docbook.xsl|${LOCALBASE}/share/xsl/docbook/manpages/profile-docbook.xsl|g" ${WRKSRC}/doc/Makefile
 
 post-install:
 	${MKDIR} ${STAGEDIR}${EXAMPLESDIR}
